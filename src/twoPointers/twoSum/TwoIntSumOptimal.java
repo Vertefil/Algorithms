@@ -1,4 +1,4 @@
-package twopointers.twosum;
+package twoPointers.twoSum;
 
 public class TwoIntSumOptimal {
     /**

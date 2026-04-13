@@ -1,4 +1,4 @@
-package arraysandhashes.longestconsecutivesequence;
+package arraysAndHashes.longestConsecutiveSequence;
 
 import java.util.ArrayList;
 import java.util.HashSet;

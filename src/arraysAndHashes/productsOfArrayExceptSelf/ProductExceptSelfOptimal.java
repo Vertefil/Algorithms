@@ -1,4 +1,4 @@
-package arraysandhashes.productsofarrayexceptself;
+package arraysAndHashes.productsOfArrayExceptSelf;
 
 public class ProductExceptSelfOptimal {
     /**

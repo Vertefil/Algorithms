@@ -1,4 +1,4 @@
-package twopointers.trappingrainwater;
+package twoPointers.trappingRainWater;
 
 public class TrappingRainWaterBrute {
     /**

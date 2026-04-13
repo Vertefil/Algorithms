@@ -1,4 +1,4 @@
-package twopointers.validpolindrom;
+package twoPointers.validPolindrom;
 
 public class ValidPalindromeOptimal {
     /**

@@ -1,4 +1,4 @@
-package twopointers.containerwithmostwater;
+package twoPointers.containerWithMostWater;
 
 public class ContainerWithMostWaterBrute {
     /**
