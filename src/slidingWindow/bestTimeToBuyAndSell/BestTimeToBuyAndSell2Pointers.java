@@ -1,4 +1,4 @@
-package slidingWindow;
+package slidingWindow.bestTimeToBuyAndSell;
 
 public class BestTimeToBuyAndSell2Pointers {
     /**
