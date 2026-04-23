@@ -1,7 +1,5 @@
 package slidingWindow.permutationInString;
 
-import java.util.Arrays;
-
 public class PermutationInStringExtraOptimal {
     /**
      * На вход подаётся строка s1 и s2. Содержатся ли в s2, одна из перестановок s1?
