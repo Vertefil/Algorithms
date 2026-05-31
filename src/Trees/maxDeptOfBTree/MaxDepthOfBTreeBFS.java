@@ -30,7 +30,7 @@ public class MaxDepthOfBTreeBFS {
      *
      * @param root TreeNode
      */
-    public int maxDepth(TreeNode root) {
+    public static int maxDepth(TreeNode root) {
         Queue<TreeNode> q = new LinkedList<>();
         if (root != null) q.offer(root);
         int level = 0;
