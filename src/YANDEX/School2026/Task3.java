@@ -1,4 +1,4 @@
-package YANDEX;
+package YANDEX.School2026;
 
 import java.io.BufferedReader;
 import java.io.IOException;
