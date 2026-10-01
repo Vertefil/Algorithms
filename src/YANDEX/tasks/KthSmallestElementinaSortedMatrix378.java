@@ -29,14 +29,13 @@ public class KthSmallestElementinaSortedMatrix378 {
      *
      *
      * Сложность:
-     *  по времени: O(k log n), если k > n, иначе O(n log n)
+     *  по времени: O(k log k), если k > n, иначе O(n log n)
      *  по памяти: O(n) - память на очередь
      *
      * @param matrix int[][]
      * @param k int
      */
     public static int kthSmallest(int[][] matrix, int k) {
-        int res = Integer.MAX_VALUE;
         //PriorityQueue - при poll всегда возращает наименьший элеемент.
         PriorityQueue<int[]> heap = new PriorityQueue<>((a, b) -> a[0] - b[0]);
         for(int i = 0; i < matrix.length; i++) {
