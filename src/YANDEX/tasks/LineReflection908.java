@@ -1,4 +1,4 @@
-package YANDEX.MbTask;
+package YANDEX.tasks;
 
 import java.util.HashSet;
 
@@ -30,7 +30,7 @@ import java.util.HashSet;
  * Если хотя бы для одной точки отражения нет ответ false.
 */
 // https://www.lintcode.com/problem/908/
-public class LineReflection {
+public class LineReflection908 {
     public static boolean isReflected(int[][] points) {
         if (points.length <= 1) return true;
         HashSet<String> set = new HashSet<>();
