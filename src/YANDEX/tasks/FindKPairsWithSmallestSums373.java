@@ -76,7 +76,7 @@ public class FindKPairsWithSmallestSums373 {
      * таким образом мы сразу можем найти k минимальных пар и в будущем будем двигаться только по второму массиву
      * Это нам сэкономит скорость и место, так как не надо держать visited
      *
-     * Пока k-- > 0 && !heap.isEmpty():
+     * Пока k > 0 && !heap.isEmpty():
      *  достаём из кучи верхний элемент и помещаем в массив
      *  Из массива достаём i - индекс первого, j - индекс второго
      *  Добавляем в результат.
@@ -84,7 +84,7 @@ public class FindKPairsWithSmallestSums373 {
      *  Проверяем, что у второго массива можем сдвинуться на j+1
      *      Если можно, добавляем в кучу (nums1[i] + nums2[j+1], i, j+1)
      *
-     *  В конце после цикла выполняется: k-- из условия цикла
+     *  k--
      *
      *  Выводим результат.
      *
@@ -104,20 +104,23 @@ public class FindKPairsWithSmallestSums373 {
         if (nums1.length == 0 || nums2.length == 0 || k == 0) return res;
 
         // heap entry: {sum, i, j}
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[0] - b[0]);
+        PriorityQueue<int[]> heap = new PriorityQueue<>((a, b) -> a[0] - b[0]);
 
-        for (int i = 0; i < Math.min(nums1.length, k); i++) {
-            pq.offer(new int[]{nums1[i] + nums2[0], i, 0});
+        for(int i = 0 ; i < Math.min(k, nums1.length); i++) {
+            heap.offer(new int[] {nums1[i] + nums2[0], i, 0});
         }
 
-        while (k-- > 0 && !pq.isEmpty()) {
-            int[] cur = pq.poll();
-            int i = cur[1], j = cur[2];
+        while (k > 0 && !heap.isEmpty()) {
+            int[] top = heap.poll();
+            int i = top[1];
+            int j = top[2];
             res.add(Arrays.asList(nums1[i], nums2[j]));
 
-            if (j + 1 < nums2.length) {
-                pq.offer(new int[]{nums1[i] + nums2[j + 1], i, j + 1});
+            if (j+1 < nums2.length) {
+                heap.offer(new int[] {nums1[i] + nums2[j+1], i, j+1});
             }
+
+            k--;
         }
         return res;
     }
