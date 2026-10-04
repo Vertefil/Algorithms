@@ -62,8 +62,8 @@ public class EditDistance72 {
         if (word1.equals(word2)) return 0;
         if (word1.isEmpty() || word2.isEmpty()) return Math.max(word1.length(), word2.length());
 
-        final int m = word1.length();
-        final int n = word2.length();
+        int m = word1.length();
+        int n = word2.length();
         int dp[][] = new int[m+1][n+1];
         for (int i = 1; i <= m; i++) {
             dp[i][0] = i;
