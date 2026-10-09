@@ -1,9 +1,6 @@
 package Trees;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
+import java.util.*;
 
 public class DFS {
     /**
@@ -69,6 +66,23 @@ public class DFS {
         RECinorderDFS(root.left, res);
         RECinorderDFS(root.right, res);
         res.add(root.val);
+    }
+
+    public static List<Integer> ITERpostOrderDFS(TreeNode root) {
+        //Используем связный список, чтобы вернуть обратный порядок
+        LinkedList<Integer> res = new LinkedList<>();
+        if (root == null) return res;
+        Deque<TreeNode> deq = new ArrayDeque<>();
+        deq.push(root);
+        // Будем реализовывать preorder, но добавлять значение в начало linkedList
+        // Таким образом мы вернём развёрнутый список в порядке лево, право, корень
+        while (!deq.isEmpty()) {
+            TreeNode node = deq.pop();
+            res.addFirst(node.val);
+            if (node.left != null) deq.push(node.left);
+            if (node.right != null) deq.push(node.right);
+        }
+        return res;
     }
 
     public static void main(String[] args) {
