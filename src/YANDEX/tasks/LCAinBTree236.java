@@ -4,7 +4,7 @@ import Trees.TreeNode;
 
 public class LCAinBTree236 {
     /**
-     * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
+     * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
      *
      * Даны главное дерево и два узла.
      * Найти наименьшего (самого нижнего по уровням) общего предка
