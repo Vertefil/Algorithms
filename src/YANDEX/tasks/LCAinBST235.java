@@ -1,9 +1,11 @@
-package Trees.LCAInBTree;
+package YANDEX.tasks;
 
 import Trees.TreeNode;
 
-public class LCAInBTreeIter {
+public class LCAinBST235 {
     /**
+     * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
+     *
      * Даны главное дерево и два узла.
      * Найти наименьшего общего предка
      *
@@ -26,12 +28,15 @@ public class LCAInBTreeIter {
      * @param p TreeNode
      * @param q TreeNode
      */
-    public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        TreeNode node = root;
-        while(node != null) {
-            if (p.val > node.val && q.val > node.val) node = node.right;
-            else if (p.val < node.val && q.val < node.val) node = node.left;
-            else return node;
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        while (root != null) {
+            if (p.val > root.val && q.val > root.val) {
+                root = root.right;
+            } else if (p.val < root.val && q.val < root.val) {
+                root = root.left;
+            } else {
+                return root;
+            }
         }
         return null;
     }

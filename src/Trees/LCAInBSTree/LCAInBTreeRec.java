@@ -1,4 +1,4 @@
-package Trees.LCAInBTree;
+package Trees.LCAInBSTree;
 
 import Trees.TreeNode;
 
