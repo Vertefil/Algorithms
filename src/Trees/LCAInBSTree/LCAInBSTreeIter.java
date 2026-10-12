@@ -2,7 +2,7 @@ package Trees.LCAInBSTree;
 
 import Trees.TreeNode;
 
-public class LCAInBTreeRec {
+public class LCAInBSTreeIter {
     /**
      * Даны главное дерево и два узла.
      * Найти наименьшего общего предка
@@ -20,16 +20,19 @@ public class LCAInBTreeRec {
      *
      * Сложность:
      *  по времени: O(h) h - высота дерева
-     *  по памяти: O(h)
+     *  по памяти: O(1)
      *
      * @param root TreeNode
      * @param p TreeNode
      * @param q TreeNode
      */
     public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (root == null || p == null || q == null) return null;
-        if (p.val > root.val && q.val > root.val) return lowestCommonAncestor(root.right, p, q);
-        else if (p.val < root.val && q.val < root.val) return lowestCommonAncestor(root.left, p, q);
-        else return root;
+        TreeNode node = root;
+        while(node != null) {
+            if (p.val > node.val && q.val > node.val) node = node.right;
+            else if (p.val < node.val && q.val < node.val) node = node.left;
+            else return node;
+        }
+        return null;
     }
 }
