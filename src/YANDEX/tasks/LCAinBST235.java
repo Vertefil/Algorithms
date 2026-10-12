@@ -6,7 +6,8 @@ public class LCAinBST235 {
     /**
      * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
      *
-     * Даны главное дерево и два узла.
+     * Дано бинарное дерево поиска (слева меньше, справа больше)
+     * Главное дерево и два узла.
      * Найти наименьшего общего предка
      *
      * Идея: найти место разделения между двумя узлами.
