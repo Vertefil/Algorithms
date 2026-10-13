@@ -3,7 +3,6 @@ package YANDEX.tasks;
 import Trees.TreeNode;
 
 public class InsertIntoBST701 {
-
     /**
      * https://leetcode.com/problems/insert-into-a-binary-search-tree/
      *
